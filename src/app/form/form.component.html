@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+
+  <label>Nome: </label>
+  <input type="text" formControlName="nome">
+ 
+  <br>
+
+  <label>CPF: </label>
+  <input type="text" formControlName="cpf">
+
+  <br>
+
+  <button (click)="enviar()" [attr.disabled]="(form.valid && form.dirty)?null:true"> Enviar </button>
+
+  <br> <br>  <br>
+
+  FORM VALIDO? {{form.valid}}
+
+</form>
